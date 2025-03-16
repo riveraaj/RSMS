@@ -2,4 +2,4 @@
 
 public record struct OperationResponseVO(ResponseStatus StatusCode = ResponseStatus.Success,
                                          string Message = CommonMessage.SUCCESS,
-                                         object Content = null);
+                                         object Content = null) : IOperationResponse;
