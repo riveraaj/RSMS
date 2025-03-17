@@ -1,18 +1,5 @@
 ﻿window.addEventListener('load', () => {
     new DataTable('.data-table', {
-        language: {
-            paginate: {
-                previous: '<i class="bi bi-caret-left text-white"></i>',
-                next: '<i class="bi bi-caret-right text-white"></i>',
-            },
-
-            aria: {
-                paginate: {
-                    previous: 'Previous',
-                    next: 'Next',
-                }
-            }
-        },
         pagingType: 'simple_numbers',
         responsive: true,
 
