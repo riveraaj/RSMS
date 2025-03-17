@@ -1,4 +1,5 @@
-﻿global using RSMS.BusinessObjects.Interfaces.Repositories.Owners;
+﻿global using Microsoft.Extensions.DependencyInjection;
+global using RSMS.BusinessObjects.Interfaces.Repositories.Owners;
 global using RSMS.BusinessObjects.Interfaces.Repositories.Properties;
 global using RSMS.BusinessObjects.Interfaces.Repositories.Properties.PropertyTypes;
 global using RSMS.BusinessObjects.POCOs.Owners;
@@ -9,3 +10,6 @@ global using RSMS.Entities.DTOs.Properties.PropertyTypes;
 global using RSMS.Repositories.Interfaces.Owners;
 global using RSMS.Repositories.Interfaces.Properties;
 global using RSMS.Repositories.Interfaces.Properties.PropertyTypes;
+global using RSMS.Repositories.Repositories.Owners;
+global using RSMS.Repositories.Repositories.Properties;
+global using RSMS.Repositories.Repositories.Properties.PropertyTypes;
