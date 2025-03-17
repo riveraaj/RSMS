@@ -22,7 +22,7 @@ namespace RSMS.Entities.Resources.Commons {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Commons {
+    public class Commons {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace RSMS.Entities.Resources.Commons {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RSMS.Entities.Resources.Commons.Commons", typeof(Commons).Assembly);
@@ -51,7 +51,7 @@ namespace RSMS.Entities.Resources.Commons {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace RSMS.Entities.Resources.Commons {
         /// <summary>
         ///   Looks up a localized string similar to Ocurrió un error al procesar su solicitud. Intente de nuevo más tarde..
         /// </summary>
-        internal static string ErrorMessage {
+        public static string ErrorMessage {
             get {
                 return ResourceManager.GetString("ErrorMessage", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace RSMS.Entities.Resources.Commons {
         /// <summary>
         ///   Looks up a localized string similar to La acción se ha completado con éxito..
         /// </summary>
-        internal static string SuccessMessage {
+        public static string SuccessMessage {
             get {
                 return ResourceManager.GetString("SuccessMessage", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace RSMS.Entities.Resources.Commons {
         /// <summary>
         ///   Looks up a localized string similar to No se pudo completar la acción solicitada. Intente nuevamente o contacte soporte si el problema persiste..
         /// </summary>
-        internal static string WarningMessage {
+        public static string WarningMessage {
             get {
                 return ResourceManager.GetString("WarningMessage", resourceCulture);
             }
