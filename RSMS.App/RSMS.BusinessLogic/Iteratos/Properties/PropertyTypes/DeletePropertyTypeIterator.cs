@@ -6,7 +6,7 @@ internal class DeletePropertyTypeIterator(IPropertyTypeRepository repository,
     private readonly IPropertyTypeRepository _repository = repository;
     private readonly IOutputPort _outputPort = outputPort;
 
-    public async Task Hanlde(int id)
+    public async Task Handle(int id)
     {
         IOperationResponse response;
         try
