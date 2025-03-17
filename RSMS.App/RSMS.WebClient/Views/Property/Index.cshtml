@@ -1,0 +1,120 @@
+﻿@model RSMS.WebClient.Models.Properties.PropertyViewModel;
+
+<div class="container">
+    <div class="container bg-white rounded shadow py-4" style="width: 98% !important;">
+
+        <div class="container pb-3">
+            <button class="text-white btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyModal"><i class="bi bi-plus-circle"></i> Add @Model.Title</button>
+        </div>
+
+        <partial name="_Create" />
+
+        <div class="content-tables">
+            <div class="table-responsive">
+                <table class="table data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">#</th>
+                            <th scope="col">Property Type</th>
+                            <th scope="col">Owner</th>
+                            <th scope="col">Number</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Area</th>
+                            <th scope="col">Construction Area</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var property in Model.Properties){
+                            <tr>
+                                <td class="text-center">@property.Id</td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "PropertyType")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
+                                        <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
+                                        <input type="hidden" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
+                                        <input type="hidden" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
+                                        <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
+                                        <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
+
+                                        <select class="form-select" asp-for="@property.PropertyTypeId" asp-items="@Model.PropertyTypes" required>
+                                            <option selected disabled value="">Seleccione una opción</option>
+                                        </select>
+                                    </form>                      
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
+                                        <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.PropertyTypeId" />
+                                        <input type="hidden" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
+                                        <input type="hidden" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
+                                        <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
+                                        <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
+
+                                        <select class="form-select" asp-for="@property.OwnerId" asp-items="@Model.Owners" required>
+                                            <option selected disabled value="">Seleccione una opción</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
+                                        <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
+                                        <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
+                                        <input type="hidden" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
+                                        <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
+                                        <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
+
+                                        <input type="text" class="form-control" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
+                                    </form>
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
+                                        <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
+                                        <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
+                                        <input type="hidden" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
+                                        <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
+                                        <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
+
+                                        <input type="text" class="form-control" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
+                                    </form>
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
+                                        <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
+                                        <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
+                                        <input type="hidden" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
+                                        <input type="hidden" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
+                                        <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
+
+                                        <input type="text" class="form-control" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
+                                    </form>
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
+                                        <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
+                                        <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
+                                        <input type="hidden" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
+                                        <input type="hidden" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
+                                        <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
+
+                                        <input type="text" class="form-control" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
+                                    </form>
+                                </td>
+                                <td>
+                                   <form asp-action="Delete" method="post" >
+                                        <input type="hidden" name="propertyTypeId" value="@property.Id"/>
+                                        <button class="btn btn-danger">Delete</button>
+                                   </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

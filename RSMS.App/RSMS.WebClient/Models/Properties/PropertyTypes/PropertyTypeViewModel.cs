@@ -1,7 +1,4 @@
-﻿using RSMS.Entities.DTOs.Properties.PropertyTypes;
-using RSMS.WebClient.Models.Bases;
-
-namespace RSMS.WebClient.Models.PropertyTypes;
+﻿namespace RSMS.WebClient.Models.Properties.PropertyTypes;
 public class PropertyTypeViewModel : BaseViewModel
 {
     public IReadOnlyList<GetAllPropertyTypeDTO> PropertyTypes { get; set; }
@@ -10,7 +7,7 @@ public class PropertyTypeViewModel : BaseViewModel
 
     public PropertyTypeViewModel()
     {
-        this.Title = "Property Type";
+        Title = "Property Type";
         PropertyTypes = [];
     }
 }

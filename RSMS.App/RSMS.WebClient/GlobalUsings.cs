@@ -1,0 +1,16 @@
+﻿global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.Rendering;
+global using Newtonsoft.Json;
+global using RSMS.BusinessObjects.Interfaces.Ports;
+global using RSMS.Controllers.Owners;
+global using RSMS.Controllers.Properties;
+global using RSMS.Controllers.Properties.PropertyTypes;
+global using RSMS.Entities.DTOs.Owners;
+global using RSMS.Entities.DTOs.Properties;
+global using RSMS.Entities.DTOs.Properties.PropertyTypes;
+global using RSMS.Entities.Enums;
+global using RSMS.Entities.Interfaces;
+global using RSMS.Entities.ValueObjects;
+global using RSMS.WebClient.Models.Bases;
+global using RSMS.WebClient.Models.Properties;
+global using RSMS.WebClient.Models.Properties.PropertyTypes;

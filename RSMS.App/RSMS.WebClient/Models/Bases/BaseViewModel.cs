@@ -1,6 +1,4 @@
-﻿using RSMS.Entities.Interfaces;
-
-namespace RSMS.WebClient.Models.Bases;
+﻿namespace RSMS.WebClient.Models.Bases;
 public abstract class BaseViewModel
 {
     public string Title { get; set; }
