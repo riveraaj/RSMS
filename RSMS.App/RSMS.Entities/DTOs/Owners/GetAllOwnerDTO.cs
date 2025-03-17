@@ -3,7 +3,7 @@ public class GetAllOwnerDTO(int id, string name, string telephone,
                             string? email, string identificationNumber,
                             string? address)
 {
-    public int Idd => id;
+    public int Id => id;
     public string Name => name;
     public string Telephone => telephone;
     public string? Email => email;

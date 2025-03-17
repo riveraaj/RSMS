@@ -1,11 +1,9 @@
 ﻿namespace RSMS.Entities.DTOs.Owners;
-public class CreateOwnerDTO(string name, string telephone,
-                            string? email, string identificationNumber,
-                            string? address)
+public class CreateOwnerDTO
 {
-    public string Name => name;
-    public string Telephone => telephone;
-    public string? Email => email;
-    public string IdentificationNumber => identificationNumber;
-    public string? Address => address;
+    public string Name { get; set; } = null!;
+    public string Telephone { get; set; } = null!;
+    public string? Email { get; set; }
+    public string IdentificationNumber { get; set; } = null!;
+    public string? Address { get; set; }
 }
