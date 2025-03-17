@@ -23,3 +23,5 @@
 /RSMS.App/RSMS.Controllers/bin/Debug/net8.0
 /RSMS.App/RSMS.DataContext.EFCore/bin/Debug/net8.0
 /RSMS.App/RSMS.IoC/obj
+/RSMS.App/RSMS.WebClient/obj
+/RSMS.App/RSMS.IoC/bin/Debug/net8.0

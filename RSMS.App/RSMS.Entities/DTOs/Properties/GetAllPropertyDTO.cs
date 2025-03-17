@@ -1,13 +1,13 @@
 ﻿namespace RSMS.Entities.DTOs.Properties;
-public class GetAllPropertyDTO(int id, short propertyTypeId, int ownerId,
-                               string number, string address, float area,
-                               float? constructionArea)
+public class GetAllPropertyDTO(int id, byte propertyTypeId, int ownerId,
+                               string number, string address, decimal area,
+                               decimal? constructionArea)
 {
     public int Id => id;
-    public short PropertyTypeId => propertyTypeId;
+    public byte PropertyTypeId => propertyTypeId;
     public int OwnerId => ownerId;
     public string Number => number;
     public string Address => address;
-    public float Area => area;
-    public float? ConstructionArea => constructionArea;
+    public decimal Area => area;
+    public decimal? ConstructionArea => constructionArea;
 }

@@ -13,7 +13,7 @@ internal class PropertyCommandsRepository(IPropertyCommandsDataContext context) 
                                                                 p.Number,
                                                                 p.Address,
                                                                 p.Area,
-                                                                p.ConstructionArea))];
+                                                                p.CosntructionArea))];
     }
 
     public async Task<bool> CreateAsync(CreatePropertyDTO oCreatePropertyDTO)
