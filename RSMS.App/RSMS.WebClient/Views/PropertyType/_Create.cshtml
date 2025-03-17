@@ -1,0 +1,36 @@
+﻿<div class="modal fade" id="oeeModal" tabindex="-1" aria-labelledby="oeeModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <form class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo OEE</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-6">
+                            <label class="m-0 form-label">Tiempo operativo obtenido</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="m-0 form-control" type="text" pattern="^[1-8][0-9]*$" maxlength="2" required />
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-6">
+                            <label class="m-0 form-label">Tiempo operativo real</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="m-0 form-control" type="text" pattern="^[1-8][0-9]*$" maxlength="2" required value="24" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Crear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
