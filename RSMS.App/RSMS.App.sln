@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35828.75 d17.13
+VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise Business Rules", "Enterprise Business Rules", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presenters", "Presenters", "{B60081A9-0F5E-4639-A7C9-7F1E6AAE603C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSMS.Presenters", "RSMS.Presenters\RSMS.Presenters.csproj", "{E62E1FC1-BFE4-4BF6-A663-A4E50ECDB961}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{44943986-F48C-4393-81EB-06BCBC5CE2D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSMS.Repositories", "RSMS.Repositories\RSMS.Repositories.csproj", "{F86943AE-55BB-433F-9D5E-5A9251A495DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{E62E1FC1-BFE4-4BF6-A663-A4E50ECDB961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E62E1FC1-BFE4-4BF6-A663-A4E50ECDB961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E62E1FC1-BFE4-4BF6-A663-A4E50ECDB961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86943AE-55BB-433F-9D5E-5A9251A495DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86943AE-55BB-433F-9D5E-5A9251A495DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86943AE-55BB-433F-9D5E-5A9251A495DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86943AE-55BB-433F-9D5E-5A9251A495DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +59,8 @@ Global
 		{AEA09B16-6535-443F-9053-708ABA79F88D} = {D0DBA7A2-9C97-4FC5-BEC2-725A22F4EE76}
 		{B60081A9-0F5E-4639-A7C9-7F1E6AAE603C} = {EDDCB1C8-CEA9-4DC0-9751-9D9D15D72C6D}
 		{E62E1FC1-BFE4-4BF6-A663-A4E50ECDB961} = {B60081A9-0F5E-4639-A7C9-7F1E6AAE603C}
+		{44943986-F48C-4393-81EB-06BCBC5CE2D9} = {EDDCB1C8-CEA9-4DC0-9751-9D9D15D72C6D}
+		{F86943AE-55BB-433F-9D5E-5A9251A495DF} = {44943986-F48C-4393-81EB-06BCBC5CE2D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {43DE7E96-D4D4-43AD-8D00-C139F9D69DD7}
