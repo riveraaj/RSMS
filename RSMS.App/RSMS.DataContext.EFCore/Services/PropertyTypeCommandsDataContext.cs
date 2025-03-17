@@ -1,5 +1,5 @@
 ﻿namespace RSMS.DataContext.EFCore.Services;
-internal class PropertyTypeTypeCommandsDataContext(RealStateDBContext context) : IPropertyTypeCommandsDataContext
+internal class PropertyTypeCommandsDataContext(RealStateDBContext context) : IPropertyTypeCommandsDataContext
 {
     private readonly RealStateDBContext _context = context;
 

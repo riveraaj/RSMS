@@ -8,6 +8,11 @@ public static class DependencyContainer
         services.AddDbContext<RealStateDBContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
+        //Services
+        services.AddScoped<IOwnerCommandsDataContext, OwnerCommandsDataContext>();
+        services.AddScoped<IPropertyCommandsDataContext, PropertyCommandsDataContext>();
+        services.AddScoped<IPropertyTypeCommandsDataContext, PropertyTypeCommandsDataContext>();
+
         return services;
     }
 }

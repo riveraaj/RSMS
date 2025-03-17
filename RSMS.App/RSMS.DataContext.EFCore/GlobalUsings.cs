@@ -4,6 +4,7 @@ global using Microsoft.Extensions.DependencyInjection;
 global using RSMS.BusinessObjects.POCOs.Owners;
 global using RSMS.BusinessObjects.POCOs.Properties;
 global using RSMS.DataContext.EFCore.DataContext;
+global using RSMS.DataContext.EFCore.Services;
 global using RSMS.Repositories.Interfaces.Owners;
 global using RSMS.Repositories.Interfaces.Properties;
 global using RSMS.Repositories.Interfaces.Properties.PropertyTypes;
