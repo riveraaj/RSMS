@@ -1,5 +1,5 @@
 ﻿namespace RSMS.Controllers.Properties.PropertyTypes;
-public static class GetAllPropertyTypeTypeController
+public static class GetAllPropertyTypeController
 {
     public static async Task<IOperationResponse> Handle(
        [FromKeyedServices("GetAllPropertyType")] IGetAllInputPort inputPort,
