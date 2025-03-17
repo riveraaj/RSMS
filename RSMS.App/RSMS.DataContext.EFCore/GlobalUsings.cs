@@ -1,0 +1,9 @@
+﻿global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using RSMS.BusinessObjects.POCOs.Owners;
+global using RSMS.BusinessObjects.POCOs.Properties;
+global using RSMS.DataContext.EFCore.DataContext;
+global using RSMS.Repositories.Interfaces.Owners;
+global using RSMS.Repositories.Interfaces.Properties;
+global using RSMS.Repositories.Interfaces.Properties.PropertyTypes;
