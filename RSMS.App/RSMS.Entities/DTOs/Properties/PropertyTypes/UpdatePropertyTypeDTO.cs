@@ -1,6 +1,6 @@
 ﻿namespace RSMS.Entities.DTOs.Properties.PropertyTypes;
-public class UpdatePropertyTypeDTO(byte id, string description)
+public class UpdatePropertyTypeDTO
 {
-    public byte Id => id;
-    public string Description => description;
+    public byte Id { get; set; }
+    public string Description { get; set; } = null!;
 }

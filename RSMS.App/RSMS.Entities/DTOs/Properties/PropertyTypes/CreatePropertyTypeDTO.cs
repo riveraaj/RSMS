@@ -1,5 +1,5 @@
 ﻿namespace RSMS.Entities.DTOs.Properties.PropertyTypes;
-public class CreatePropertyTypeDTO(string description)
+public class CreatePropertyTypeDTO
 {
-    public string Description => description;
+    public string Description { get; set; } = null!;
 }
