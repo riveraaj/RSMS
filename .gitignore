@@ -15,3 +15,6 @@
 /RSMS.App/RSMS.Presenters/obj
 /RSMS.App/.vs/ProjectEvaluation
 /RSMS.App/RSMS.Repositories/obj
+/RSMS.App/RSMS.Presenters/bin/Debug/net8.0
+/RSMS.App/RSMS.Repositories/bin/Debug/net8.0
+/RSMS.App/RSMS.Repositories/bin/Debug/net8.0/RSMS.BusinessObjects.dll
