@@ -4,7 +4,7 @@
     <div class="container bg-white rounded shadow py-4" style="width: 98% !important;">
 
         <div class="container pb-3">
-            <button class="text-white btn btn-success" data-bs-toggle="modal" data-bs-target="#oeeModal"><i class="bi bi-plus-circle"></i> Add @Model.Title</button>
+            <button class="text-white btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyTypeModal"><i class="bi bi-plus-circle"></i> Add @Model.Title</button>
         </div>
 
         <partial name="_Create" />
@@ -16,13 +16,25 @@
                         <tr>
                             <th scope="col" class="text-center">#</th>
                             <th scope="col">Description</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach(var properyType in Model.PropertyTypes){
                             <tr>
-                                <td class="text-center">@properyType.Id</td>
-                                <td>@properyType.Description</td>
+                                <td class="text-center">@properyType.Id</td>                          
+                                <td>
+                                    <form data-url="@Url.Action("Update", "PropertyType")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@properyType.Id" asp-for="PropertyTypeUpdateObj.Id"/>
+                                        <input type="text" class="form-control" value="@properyType.Description" asp-for="PropertyTypeUpdateObj.Description" />
+                                    </form>                      
+                                </td>
+                                <td>
+                                   <form asp-action="Delete" method="post" >
+                                        <input type="hidden" name="propertyTypeId" value="@properyType.Id"/>
+                                        <button class="btn btn-danger">Delete</button>
+                                   </form>
+                                </td>
                             </tr>
                         }
                     </tbody>

@@ -1,14 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RSMS.BusinessObjects.Interfaces.Ports;
 using RSMS.Controllers.Properties.PropertyTypes;
 using RSMS.Entities.DTOs.Properties.PropertyTypes;
 using RSMS.Entities.Enums;
 using RSMS.Entities.Interfaces;
+using RSMS.Entities.ValueObjects;
 using RSMS.WebClient.Models.PropertyTypes;
 
 namespace RSMS.WebClient.Controllers
 {
     public class PropertyTypeController([FromKeyedServices("GetAllPropertyType")] IGetAllInputPort getAllInputPort,
+                                        ICreateInputPort<CreatePropertyTypeDTO> createInputPort,
+                                        IUpdateInputPort<UpdatePropertyTypeDTO> updateInputPort,
+                                        [FromKeyedServices("DeletePropertyType")] IDeleteInputPort deleteInputPort,
                                         IOutputPort outputPort) : Controller
     {
         public async Task<IActionResult> Index()
@@ -21,9 +26,59 @@ namespace RSMS.WebClient.Controllers
 
             // Validate if are any errors
             if (response.StatusCode != ResponseStatus.Success) model.Response = response;
-            model.PropertyTypes = response.Content as List<GetAllPropertyTypeDTO> ?? [];
+            model.PropertyTypes = response.Content as IReadOnlyList<GetAllPropertyTypeDTO> ?? [];
+
+            // Validate if alert exist
+            if (TempData["alert"] is not null)
+            {
+                var alert = JsonConvert.DeserializeObject<OperationResponseVO>((string)TempData["alert"]);
+                model.Response = alert;
+            }
 
             return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(PropertyTypeViewModel model)
+        {
+            IOperationResponse response = await CreatePropertyTypeController.Handle(model.PropertyTypeObj,
+                                                                                    createInputPort,
+                                                                                    outputPort);
+
+            if (response.StatusCode == ResponseStatus.Success)
+            {
+                TempData["alert"] = JsonConvert.SerializeObject(response);
+                return RedirectToAction("Index");
+            }
+
+            model.Response = response;
+
+            return View("Index", model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(PropertyTypeViewModel model)
+        {
+            IOperationResponse response = await UpdatePropertyTypeController.Handle(model.PropertyTypeUpdateObj,
+                                                                                    updateInputPort,
+                                                                                    outputPort);
+
+            return Json(new
+            {
+                message = response.Message.FirstOrDefault(),
+                status = response.StatusCode.ToString()
+            });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int propertyTypeId)
+        {
+            IOperationResponse response = await DeletePropertyTypeController.Handle(propertyTypeId,
+                                                                                    deleteInputPort,
+                                                                                    outputPort);
+
+            TempData["alert"] = JsonConvert.SerializeObject(response);
+            return RedirectToAction("Index");
         }
     }
 }
