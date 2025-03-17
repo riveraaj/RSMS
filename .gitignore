@@ -22,3 +22,4 @@
 /RSMS.App/RSMS.DataContext.EFCore/obj
 /RSMS.App/RSMS.Controllers/bin/Debug/net8.0
 /RSMS.App/RSMS.DataContext.EFCore/bin/Debug/net8.0
+/RSMS.App/RSMS.IoC/obj
