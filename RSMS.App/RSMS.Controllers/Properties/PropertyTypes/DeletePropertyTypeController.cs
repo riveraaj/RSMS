@@ -1,5 +1,5 @@
 ﻿namespace RSMS.Controllers.Properties.PropertyTypes;
-public static class DeletePropertyTypeTypeController
+public static class DeletePropertyTypeController
 {
     public static async Task<IOperationResponse> Handle(
        int id,

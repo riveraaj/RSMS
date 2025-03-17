@@ -1,5 +1,5 @@
 ﻿namespace RSMS.Controllers.Properties.PropertyTypes;
-public static class UpdatePropertyTypeTypeController
+public static class UpdatePropertyTypeController
 {
     public static async Task<IOperationResponse> Handle(
         UpdatePropertyTypeDTO oUpdatePropertyTypeDTO,

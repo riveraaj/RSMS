@@ -1,5 +1,5 @@
 ﻿namespace RSMS.Controllers.Properties.PropertyTypes;
-public static class CreatePropertyTypeTypeController
+public static class CreatePropertyTypeController
 {
     public static async Task<IOperationResponse> Handle(
         CreatePropertyTypeDTO oCreatePropertyTypeDTO,
