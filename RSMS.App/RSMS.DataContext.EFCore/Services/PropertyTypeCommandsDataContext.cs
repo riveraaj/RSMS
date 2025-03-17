@@ -26,7 +26,7 @@ internal class PropertyTypeCommandsDataContext(RealStateDBContext context) : IPr
 
     public async Task<bool> DeleteAsync(int id)
     {
-        PropertyTypePOCO propertyType = await _context.PropertyTypes.FindAsync(id);
+        PropertyTypePOCO propertyType = await _context.PropertyTypes.FindAsync((byte)id);
         _context.PropertyTypes.Remove(propertyType);
 
         int affectedRows = await _context.SaveChangesAsync();
