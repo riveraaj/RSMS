@@ -19,3 +19,4 @@
 /RSMS.App/RSMS.Repositories/bin/Debug/net8.0
 /RSMS.App/RSMS.Repositories/bin/Debug/net8.0/RSMS.BusinessObjects.dll
 /RSMS.App/RSMS.Controllers/obj
+/RSMS.App/RSMS.DataContext.EFCore/obj

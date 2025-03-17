@@ -2,12 +2,12 @@
 public class PropertyPOCO
 {
     public int PropertyId { get; set; }
-    public short PropertyTypeId { get; set; }
+    public byte PropertyTypeId { get; set; }
     public int OwnerId { get; set; }
-    public string Number { get; set; }
-    public string Address { get; set; }
-    public float Area { get; set; }
-    public float? ConstructionArea { get; set; }
+    public string Number { get; set; } = null!;
+    public string Address { get; set; } = null!;
+    public decimal Area { get; set; }
+    public decimal? CosntructionArea { get; set; }
 
     public static PropertyPOCO MapFrom(CreatePropertyDTO oCreatePropertyDTO)
         => new()
@@ -17,7 +17,7 @@ public class PropertyPOCO
             Number = oCreatePropertyDTO.Number,
             Address = oCreatePropertyDTO.Address,
             Area = oCreatePropertyDTO.Area,
-            ConstructionArea = oCreatePropertyDTO.ConstructionArea,
+            CosntructionArea = oCreatePropertyDTO.ConstructionArea,
         };
 
     public static PropertyPOCO MapFrom(UpdatePropertyDTO oUpdatePropertyDTO)
@@ -29,6 +29,6 @@ public class PropertyPOCO
             Number = oUpdatePropertyDTO.Number,
             Address = oUpdatePropertyDTO.Address,
             Area = oUpdatePropertyDTO.Area,
-            ConstructionArea = oUpdatePropertyDTO.ConstructionArea,
+            CosntructionArea = oUpdatePropertyDTO.ConstructionArea,
         };
 }
