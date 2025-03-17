@@ -11,3 +11,5 @@
 /RSMS.App/RSMS.BusinessObjects/obj/Debug/net8.0/ref
 /RSMS.App/RSMS.BusinessLogic/bin/Debug/net8.0
 /RSMS.App/RSMS.BusinessLogic/obj
+/RSMS.App/RSMS.BusinessObjects/obj
+/RSMS.App/RSMS.Presenters/obj
