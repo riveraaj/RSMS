@@ -6,3 +6,8 @@
 /RSMS.App/.vs/RSMS.App
 /RSMS.App/RSMS.Entities/obj
 /RSMS.App/RSMS.Entities/bin/Debug/net8.0
+/RSMS.App/RSMS.BusinessObjects/bin/Debug/net8.0
+/RSMS.App/RSMS.BusinessObjects/obj/Debug/net8.0/refint
+/RSMS.App/RSMS.BusinessObjects/obj/Debug/net8.0/ref
+/RSMS.App/RSMS.BusinessLogic/bin/Debug/net8.0
+/RSMS.App/RSMS.BusinessLogic/obj
