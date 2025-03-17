@@ -1,5 +1,5 @@
 ﻿namespace RSMS.Controllers.Owners;
-class DeleteOwnerController
+public class DeleteOwnerController
 {
     public static async Task<IOperationResponse> Handle(
        int id,

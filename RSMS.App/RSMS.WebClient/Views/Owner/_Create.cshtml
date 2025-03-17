@@ -1,0 +1,65 @@
+﻿@model RSMS.WebClient.Models.Owners.OwnerViewModel;
+
+<div class="modal fade" id="ownerModal" tabindex="-1" aria-labelledby="ownerModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <form asp-action="Create" class="needs-validation" novalidate method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">New @Model.Title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-6">
+                            <label asp-for="OwnerObj.Name" class="m-0 form-label">Name</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="m-0 form-control" asp-for="OwnerObj.Name" type="text" maxlength="255" required />
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-6">
+                            <label asp-for="OwnerObj.Telephone" class="m-0 form-label">Telephone</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="m-0 form-control" asp-for="OwnerObj.Telephone" type="text" maxlength="255" required />
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-6">
+                            <label asp-for="OwnerObj.Email" class="m-0 form-label">Email</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="m-0 form-control" asp-for="OwnerObj.Email" type="email" maxlength="255" required />
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-6">
+                            <label asp-for="OwnerObj.IdentificationNumber" class="m-0 form-label">Identification Number</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="m-0 form-control" asp-for="OwnerObj.IdentificationNumber" type="text" maxlength="255" required />
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-6">
+                            <label asp-for="OwnerObj.Address" class="m-0 form-label">Address</label>
+                        </div>
+                        <div class="col-6">
+                            <input class="m-0 form-control" asp-for="OwnerObj.Address" type="text" maxlength="255" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

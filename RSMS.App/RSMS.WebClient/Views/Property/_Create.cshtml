@@ -33,7 +33,7 @@
                             <label asp-for="@Model.PropertyObj.Area" class="m-0 form-label">Area</label>
                         </div>
                         <div class="col-6">
-                            <input class="m-0 form-control" asp-for="@Model.PropertyObj.Area" type="number" required />
+                            <input class="m-0 form-control" asp-for="@Model.PropertyObj.Area" step="0.01" type="" required />
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@
                             <label asp-for="@Model.PropertyObj.ConstructionArea" class="m-0 form-label">Construction Area</label>
                         </div>
                         <div class="col-6">
-                            <input class="m-0 form-control" asp-for="@Model.PropertyObj.ConstructionArea" type="number" />
+                            <input class="m-0 form-control" asp-for="@Model.PropertyObj.ConstructionArea" step="0.01" type="number" />
                         </div>
                     </div>
 

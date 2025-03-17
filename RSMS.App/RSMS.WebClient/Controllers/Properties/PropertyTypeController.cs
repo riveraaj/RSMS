@@ -54,7 +54,7 @@ public class PropertyTypeController([FromKeyedServices("GetAllPropertyType")] IG
 
         return Json(new
         {
-            message = response.Message.FirstOrDefault(),
+            message = response.Message,
             status = response.StatusCode.ToString()
         });
     }

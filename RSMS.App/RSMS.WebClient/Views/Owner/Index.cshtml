@@ -1,0 +1,98 @@
+﻿@model RSMS.WebClient.Models.Owners.OwnerViewModel;
+
+<div class="container">
+    <div class="container bg-white rounded shadow py-4" style="width: 98% !important;">
+
+        <div class="container pb-3">
+            <button class="text-white btn btn-primary" data-bs-toggle="modal" data-bs-target="#ownerModal"><i class="bi bi-plus-circle"></i> Add @Model.Title</button>
+        </div>
+
+        <partial name="_Create" />
+
+        <div class="content-tables">
+            <div class="table-responsive">
+                <table class="table data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Telephone</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">IdentificationNumber</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var owner in Model.Owners){
+                            <tr>
+                                <td class="text-center">@owner.Id</td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Owner")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@owner.Id" asp-for="OwnerUpdateObj.Id" />
+                                        <input type="hidden" value="@owner.Telephone" asp-for="OwnerUpdateObj.Telephone" />
+                                        <input type="hidden" value="@owner.Email" asp-for="OwnerUpdateObj.Email" />
+                                        <input type="hidden" value="@owner.IdentificationNumber" asp-for="OwnerUpdateObj.IdentificationNumber" />
+                                        <input type="hidden" value="@owner.Address" asp-for="OwnerUpdateObj.Address" />
+
+                                        <input type="text" class="form-control" value="@owner.Name" asp-for="OwnerUpdateObj.Name" maxlength="255" required />
+                                    </form>                      
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Owner")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@owner.Id" asp-for="OwnerUpdateObj.Id" />
+                                        <input type="hidden" value="@owner.Name" asp-for="OwnerUpdateObj.Name" />
+                                        <input type="hidden" value="@owner.Email" asp-for="OwnerUpdateObj.Email" />
+                                        <input type="hidden" value="@owner.IdentificationNumber" asp-for="OwnerUpdateObj.IdentificationNumber" />
+                                        <input type="hidden" value="@owner.Address" asp-for="OwnerUpdateObj.Address" />
+
+                                        <input type="text" class="form-control" value="@owner.Telephone" asp-for="OwnerUpdateObj.Telephone" maxlength="255" required />
+                                    </form>
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Owner")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@owner.Id" asp-for="OwnerUpdateObj.Id" />
+                                        <input type="hidden" value="@owner.Name" asp-for="OwnerUpdateObj.Name" />
+                                        <input type="hidden" value="@owner.Telephone" asp-for="OwnerUpdateObj.Telephone" />
+                                        <input type="hidden" value="@owner.IdentificationNumber" asp-for="OwnerUpdateObj.IdentificationNumber" />
+                                        <input type="hidden" value="@owner.Address" asp-for="OwnerUpdateObj.Address" />
+
+                                        <input type="text" class="form-control" value="@owner.Email" asp-for="OwnerUpdateObj.Email" maxlength="255" />
+                                    </form>
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Owner")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@owner.Id" asp-for="OwnerUpdateObj.Id" />
+                                        <input type="hidden" value="@owner.Name" asp-for="OwnerUpdateObj.Name" />
+                                        <input type="hidden" value="@owner.Telephone" asp-for="OwnerUpdateObj.Telephone" />
+                                        <input type="hidden" value="@owner.Email" asp-for="OwnerUpdateObj.Email" />
+                                        <input type="hidden" value="@owner.Address" asp-for="OwnerUpdateObj.Address" />
+
+                                        <input type="text" class="form-control" value="@owner.IdentificationNumber" asp-for="OwnerUpdateObj.IdentificationNumber" maxlength="255" required />
+                                    </form>
+                                </td>
+                                <td>
+                                    <form data-url="@Url.Action("Update", "Owner")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                        <input type="hidden" value="@owner.Id" asp-for="OwnerUpdateObj.Id" />
+                                        <input type="hidden" value="@owner.Name" asp-for="OwnerUpdateObj.Name" />
+                                        <input type="hidden" value="@owner.Telephone" asp-for="OwnerUpdateObj.Telephone" />
+                                        <input type="hidden" value="@owner.Email" asp-for="OwnerUpdateObj.Email" />
+                                        <input type="hidden" value="@owner.IdentificationNumber" asp-for="OwnerUpdateObj.IdentificationNumber" />
+
+                                        <input type="text" class="form-control" value="@owner.Address" asp-for="OwnerUpdateObj.Address" maxlength="255" />
+                                    </form>
+                                </td>
+                                <td>
+                                   <form asp-action="Delete" method="post" >
+                                        <input type="hidden" name="ownerId" value="@owner.Id" />
+                                        <button class="btn btn-danger">Delete</button>
+                                   </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

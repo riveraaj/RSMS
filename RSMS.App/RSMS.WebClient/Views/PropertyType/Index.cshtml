@@ -26,7 +26,7 @@
                                 <td>
                                     <form data-url="@Url.Action("Update", "PropertyType")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
                                         <input type="hidden" value="@properyType.Id" asp-for="PropertyTypeUpdateObj.Id"/>
-                                        <input type="text" class="form-control" value="@properyType.Description" asp-for="PropertyTypeUpdateObj.Description" />
+                                        <input type="text" class="form-control" value="@properyType.Description" asp-for="PropertyTypeUpdateObj.Description" required />
                                     </form>                      
                                 </td>
                                 <td>

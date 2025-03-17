@@ -1,7 +1,7 @@
 ﻿namespace RSMS.WebClient.Controllers.Properties;
 public class PropertyController([FromKeyedServices("GetAllProperty")] IGetAllInputPort getAllInputPort,
                                 [FromKeyedServices("GetAllPropertyType")] IGetAllInputPort getAllTypeInputPort,
-                                [FromKeyedServices("GetAllOwner")] IGetAllInputPort getAllOwnerInputPort,
+                                [FromKeyedServices("GetAllOwnerForProperty")] IGetAllInputPort getAllOwnerInputPort,
                                 ICreateInputPort<CreatePropertyDTO> createInputPort,
                                 IUpdateInputPort<UpdatePropertyDTO> updateInputPort,
                                 [FromKeyedServices("DeleteProperty")] IDeleteInputPort deleteInputPort,
@@ -68,7 +68,7 @@ public class PropertyController([FromKeyedServices("GetAllProperty")] IGetAllInp
 
         return Json(new
         {
-            message = response.Message.FirstOrDefault(),
+            message = response.Message,
             status = response.StatusCode.ToString()
         });
     }

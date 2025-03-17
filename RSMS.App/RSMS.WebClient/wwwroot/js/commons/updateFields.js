@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let emptyInputs = false;
 
-            formData.forEach((value, key) => emptyInputs = (value === "" || value === null) ?  true : false);
+            formData.forEach((value) => emptyInputs = (value === "" || value === null) ?  true : false);
 
             if (!emptyInputs) {
                 fetch(url, {

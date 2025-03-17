@@ -65,7 +65,7 @@
                                         <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
                                         <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
 
-                                        <input type="text" class="form-control" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
+                                        <input type="text" class="form-control" value="@property.Number" asp-for="PropertyUpdateObj.Number" required />
                                     </form>
                                 </td>
                                 <td>
@@ -77,7 +77,7 @@
                                         <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
                                         <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
 
-                                        <input type="text" class="form-control" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
+                                        <input type="text" class="form-control" value="@property.Address" asp-for="PropertyUpdateObj.Address" required />
                                     </form>
                                 </td>
                                 <td>
@@ -89,7 +89,7 @@
                                         <input type="hidden" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
                                         <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
 
-                                        <input type="text" class="form-control" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
+                                        <input type="number" class="form-control" value="@property.Area" step="0.01" asp-for="PropertyUpdateObj.Area" required />
                                     </form>
                                 </td>
                                 <td>
@@ -101,12 +101,12 @@
                                         <input type="hidden" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
                                         <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
 
-                                        <input type="text" class="form-control" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
+                                        <input type="number" class="form-control" value="@property.ConstructionArea" step="0.01" asp-for="PropertyUpdateObj.ConstructionArea" />
                                     </form>
                                 </td>
                                 <td>
                                    <form asp-action="Delete" method="post" >
-                                        <input type="hidden" name="propertyTypeId" value="@property.Id"/>
+                                        <input type="hidden" name="propertyId" value="@property.Id"/>
                                         <button class="btn btn-danger">Delete</button>
                                    </form>
                                 </td>

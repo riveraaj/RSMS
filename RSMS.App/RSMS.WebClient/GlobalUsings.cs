@@ -12,5 +12,6 @@ global using RSMS.Entities.Enums;
 global using RSMS.Entities.Interfaces;
 global using RSMS.Entities.ValueObjects;
 global using RSMS.WebClient.Models.Bases;
+global using RSMS.WebClient.Models.Owners;
 global using RSMS.WebClient.Models.Properties;
 global using RSMS.WebClient.Models.Properties.PropertyTypes;
