@@ -1,10 +1,12 @@
+using RSMS.IoC;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 //Add global services
-//builder.Services.AddRSMSServices(builder.Configuration);
+builder.Services.AddRSMSServices(builder.Configuration);
 
 var app = builder.Build();
 

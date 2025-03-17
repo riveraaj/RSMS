@@ -1,8 +1,10 @@
-﻿<div class="container">
+﻿@model RSMS.WebClient.Models.PropertyTypes.PropertyTypeViewModel;
+
+<div class="container">
     <div class="container bg-white rounded shadow py-4" style="width: 98% !important;">
 
         <div class="container pb-3">
-            <button class="text-white btn btn-success" data-bs-toggle="modal" data-bs-target="#oeeModal"><i class="bi bi-plus-circle"></i> Añadir OEE</button>
+            <button class="text-white btn btn-success" data-bs-toggle="modal" data-bs-target="#oeeModal"><i class="bi bi-plus-circle"></i> Add @Model.Title</button>
         </div>
 
         <partial name="_Create" />
@@ -12,20 +14,17 @@
                 <table class="table data-table">
                     <thead>
                         <tr>
-                            <th scope="col">Máquina</th>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Disponibilidad</th>
-                            <th scope="col">Rendimiento</th>
-                            <th scope="col">Calidad</th>
-                            <th scope="col">Total</th>
-                            <th scope="col">Empleado #1</th>
-                            <th scope="col">Empleado #2</th>
-                            <th scope="col">Empleado #3</th>
-                            <th scope="col">Acciones</th>
+                            <th scope="col" class="text-center">#</th>
+                            <th scope="col">Description</th>
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        @foreach(var properyType in Model.PropertyTypes){
+                            <tr>
+                                <td class="text-center">@properyType.Id</td>
+                                <td>@properyType.Description</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

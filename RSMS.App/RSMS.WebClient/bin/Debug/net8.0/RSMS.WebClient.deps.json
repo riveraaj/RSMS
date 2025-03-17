@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "RSMS.WebClient/1.0.0": {
         "dependencies": {
+          "RSMS.Controllers": "1.0.0",
           "RSMS.IoC": "1.0.0"
         },
         "runtime": {
@@ -638,6 +639,19 @@
           }
         }
       },
+      "RSMS.Controllers/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "9.0.3",
+          "RSMS.BusinessObjects": "1.0.0",
+          "RSMS.Entities": "1.0.0"
+        },
+        "runtime": {
+          "RSMS.Controllers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "RSMS.DataContext.EFCore/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.3",
@@ -1105,6 +1119,11 @@
       "sha512": ""
     },
     "RSMS.BusinessObjects/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RSMS.Controllers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
