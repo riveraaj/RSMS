@@ -1,5 +1,5 @@
 ﻿namespace RSMS.BusinessObjects.Interfaces.Ports;
-public interface IGetAllInputPort<T>
+public interface IGetAllInputPort
 {
-    Task Handle(T param);
+    Task Handle();
 }

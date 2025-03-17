@@ -1,0 +1,16 @@
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\bin\Debug\net8.0\RSMS.BusinessObjects.deps.json
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\bin\Debug\net8.0\RSMS.BusinessObjects.dll
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\bin\Debug\net8.0\RSMS.BusinessObjects.pdb
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\bin\Debug\net8.0\RSMS.Entities.dll
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\bin\Debug\net8.0\RSMS.Entities.pdb
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.BusinessObjects.csproj.AssemblyReference.cache
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.BusinessObjects.AssemblyInfoInputs.cache
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.BusinessObjects.AssemblyInfo.cs
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.BusinessObjects.csproj.CoreCompileInputs.cache
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.BusinessObjects.sourcelink.json
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.Bus.C7B4F361.Up2Date
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.BusinessObjects.dll
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\refint\RSMS.BusinessObjects.dll
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\RSMS.BusinessObjects.pdb
+C:\Users\Anonymous\Downloads\RSMS\RSMS.App\RSMS.BusinessObjects\obj\Debug\net8.0\ref\RSMS.BusinessObjects.dll
