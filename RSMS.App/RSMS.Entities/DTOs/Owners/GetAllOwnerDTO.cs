@@ -1,12 +1,12 @@
 ﻿namespace RSMS.Entities.DTOs.Owners;
 public class GetAllOwnerDTO(int id, string name, string telephone,
-                            string email, string identificationNumber,
-                            string address)
+                            string? email, string identificationNumber,
+                            string? address)
 {
     public int Idd => id;
     public string Name => name;
     public string Telephone => telephone;
-    public string Email => email;
+    public string? Email => email;
     public string IdentificationNumber => identificationNumber;
-    public string Address => address;
+    public string? Address => address;
 }
