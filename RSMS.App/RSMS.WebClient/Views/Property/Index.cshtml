@@ -29,7 +29,7 @@
                             <tr>
                                 <td class="text-center">@property.Id</td>
                                 <td>
-                                    <form data-url="@Url.Action("Update", "PropertyType")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-property-form needs-validation" method="post" onsubmit="return false" novalidate>
                                         <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
                                         <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
                                         <input type="hidden" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
@@ -37,27 +37,27 @@
                                         <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
                                         <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
 
-                                        <select class="form-select" asp-for="@property.PropertyTypeId" asp-items="@Model.PropertyTypes" required>
+                                        <select class="form-select" asp-for="@property.PropertyTypeId" asp-items="@Model.PropertyTypes" readonly>
                                             <option selected disabled value="">Seleccione una opción</option>
                                         </select>
                                     </form>                      
                                 </td>
                                 <td>
-                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-property-form needs-validation" method="post" onsubmit="return false" novalidate>
                                         <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
-                                        <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.PropertyTypeId" />
+                                        <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
                                         <input type="hidden" value="@property.Number" asp-for="PropertyUpdateObj.Number" />
                                         <input type="hidden" value="@property.Address" asp-for="PropertyUpdateObj.Address" />
                                         <input type="hidden" value="@property.Area" asp-for="PropertyUpdateObj.Area" />
                                         <input type="hidden" value="@property.ConstructionArea" asp-for="PropertyUpdateObj.ConstructionArea" />
 
-                                        <select class="form-select" asp-for="@property.OwnerId" asp-items="@Model.Owners" required>
+                                        <select class="form-select" asp-for="@property.OwnerId" asp-items="@Model.Owners" readonly>
                                             <option selected disabled value="">Seleccione una opción</option>
                                         </select>
                                     </form>
                                 </td>
                                 <td>
-                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-property-form needs-validation" method="post" onsubmit="return false" novalidate>
                                         <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
                                         <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
                                         <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
@@ -69,7 +69,7 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-property-form needs-validation" method="post" onsubmit="return false" novalidate>
                                         <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
                                         <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
                                         <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
@@ -81,7 +81,7 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-property-form needs-validation" method="post" onsubmit="return false" novalidate>
                                         <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
                                         <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
                                         <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
@@ -93,7 +93,7 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <form data-url="@Url.Action("Update", "Property")" class="update-form needs-validation" method="post" onsubmit="return false" novalidate>
+                                    <form data-url="@Url.Action("Update", "Property")" class="update-property-form needs-validation" method="post" onsubmit="return false" novalidate>
                                         <input type="hidden" value="@property.Id" asp-for="PropertyUpdateObj.Id" />
                                         <input type="hidden" value="@property.OwnerId" asp-for="PropertyUpdateObj.OwnerId" />
                                         <input type="hidden" value="@property.PropertyTypeId" asp-for="PropertyUpdateObj.PropertyTypeId" />
@@ -118,3 +118,7 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/properties/property.js"></script>
+}

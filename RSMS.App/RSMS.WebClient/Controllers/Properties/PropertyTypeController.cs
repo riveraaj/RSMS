@@ -30,9 +30,23 @@ public class PropertyTypeController([FromKeyedServices("GetAllPropertyType")] IG
     [HttpPost]
     public async Task<IActionResult> Create(PropertyTypeViewModel model)
     {
-        IOperationResponse response = await CreatePropertyTypeController.Handle(model.PropertyTypeObj,
-                                                                                createInputPort,
-                                                                                outputPort);
+        IOperationResponse response;
+
+        // Validate data
+        if (!ModelState.IsValid)
+        {
+            response = new OperationResponseVO
+            {
+                StatusCode = ResponseStatus.Warning,
+                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+            };
+        }
+        else
+        {
+            response = await CreatePropertyTypeController.Handle(model.PropertyTypeObj,
+                                                                 createInputPort,
+                                                                 outputPort);
+        }
 
         if (response.StatusCode == ResponseStatus.Success)
         {
@@ -48,9 +62,23 @@ public class PropertyTypeController([FromKeyedServices("GetAllPropertyType")] IG
     [HttpPost]
     public async Task<IActionResult> Update(PropertyTypeViewModel model)
     {
-        IOperationResponse response = await UpdatePropertyTypeController.Handle(model.PropertyTypeUpdateObj,
-                                                                                updateInputPort,
-                                                                                outputPort);
+        IOperationResponse response;
+
+        // Validate data
+        if (!ModelState.IsValid)
+        {
+            response = new OperationResponseVO
+            {
+                StatusCode = ResponseStatus.Warning,
+                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+            };
+        }
+        else
+        {
+            response = await UpdatePropertyTypeController.Handle(model.PropertyTypeUpdateObj,
+                                                                 updateInputPort,
+                                                                 outputPort);
+        }
 
         return Json(new
         {

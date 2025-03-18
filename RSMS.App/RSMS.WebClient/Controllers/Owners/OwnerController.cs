@@ -30,9 +30,23 @@ public class OwnerController([FromKeyedServices("GetAllOwner")] IGetAllInputPort
     [HttpPost]
     public async Task<IActionResult> Create(OwnerViewModel model)
     {
-        IOperationResponse response = await CreateOwnerController.Handle(model.OwnerObj,
-                                                                         createInputPort,
-                                                                         outputPort);
+        IOperationResponse response;
+
+        // Validate data
+        if (!ModelState.IsValid)
+        {
+            response = new OperationResponseVO
+            {
+                StatusCode = ResponseStatus.Warning,
+                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+            };
+        }
+        else
+        {
+            response = await CreateOwnerController.Handle(model.OwnerObj,
+                                                          createInputPort,
+                                                          outputPort);
+        }
 
         if (response.StatusCode == ResponseStatus.Success)
         {
@@ -48,9 +62,23 @@ public class OwnerController([FromKeyedServices("GetAllOwner")] IGetAllInputPort
     [HttpPost]
     public async Task<IActionResult> Update(OwnerViewModel model)
     {
-        IOperationResponse response = await UpdateOwnerController.Handle(model.OwnerUpdateObj,
-                                                                         updateInputPort,
-                                                                         outputPort);
+        IOperationResponse response;
+
+        // Validate data
+        if (!ModelState.IsValid)
+        {
+            response = new OperationResponseVO
+            {
+                StatusCode = ResponseStatus.Warning,
+                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+            };
+        }
+        else
+        {
+            response = await UpdateOwnerController.Handle(model.OwnerUpdateObj,
+                                                          updateInputPort,
+                                                          outputPort);
+        }
 
         return Json(new
         {

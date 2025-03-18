@@ -1,4 +1,6 @@
-﻿global using Microsoft.AspNetCore.Mvc;
+﻿global using FluentValidation;
+global using FluentValidation.AspNetCore;
+global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Rendering;
 global using Newtonsoft.Json;
 global using RSMS.BusinessObjects.Interfaces.Ports;
@@ -11,6 +13,7 @@ global using RSMS.Entities.DTOs.Properties.PropertyTypes;
 global using RSMS.Entities.Enums;
 global using RSMS.Entities.Interfaces;
 global using RSMS.Entities.ValueObjects;
+global using RSMS.IoC;
 global using RSMS.WebClient.Models.Bases;
 global using RSMS.WebClient.Models.Owners;
 global using RSMS.WebClient.Models.Properties;

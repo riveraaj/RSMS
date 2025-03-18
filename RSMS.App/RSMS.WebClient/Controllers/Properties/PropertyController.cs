@@ -44,9 +44,23 @@ public class PropertyController([FromKeyedServices("GetAllProperty")] IGetAllInp
     [HttpPost]
     public async Task<IActionResult> Create(PropertyViewModel model)
     {
-        IOperationResponse response = await CreatePropertyController.Handle(model.PropertyObj,
-                                                                            createInputPort,
-                                                                            outputPort);
+        IOperationResponse response;
+
+        // Validate data
+        if (!ModelState.IsValid)
+        {
+            response = new OperationResponseVO
+            {
+                StatusCode = ResponseStatus.Warning,
+                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+            };
+        }
+        else
+        {
+            response = await CreatePropertyController.Handle(model.PropertyObj,
+                                                             createInputPort,
+                                                             outputPort);
+        }
 
         if (response.StatusCode == ResponseStatus.Success)
         {
@@ -62,9 +76,23 @@ public class PropertyController([FromKeyedServices("GetAllProperty")] IGetAllInp
     [HttpPost]
     public async Task<IActionResult> Update(PropertyViewModel model)
     {
-        IOperationResponse response = await UpdatePropertyController.Handle(model.PropertyUpdateObj,
-                                                                            updateInputPort,
-                                                                            outputPort);
+        IOperationResponse response;
+
+        // Validate data
+        if (!ModelState.IsValid)
+        {
+            response = new OperationResponseVO
+            {
+                StatusCode = ResponseStatus.Warning,
+                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+            };
+        }
+        else
+        {
+            response = await UpdatePropertyController.Handle(model.PropertyUpdateObj,
+                                                             updateInputPort,
+                                                             outputPort);
+        }
 
         return Json(new
         {
