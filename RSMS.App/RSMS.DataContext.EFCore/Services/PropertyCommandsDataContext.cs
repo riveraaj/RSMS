@@ -20,7 +20,7 @@ internal class PropertyCommandsDataContext(RealStateDBContext context) : IProper
 
         property.Number = oPropertyPOCO.Number;
         property.Address = oPropertyPOCO.Address;
-        property.PropertyId = oPropertyPOCO.PropertyId;
+        property.PropertyTypeId = oPropertyPOCO.PropertyTypeId;
         property.Area = oPropertyPOCO.Area;
         property.OwnerId = oPropertyPOCO.OwnerId;
         property.CosntructionArea = oPropertyPOCO.CosntructionArea;
