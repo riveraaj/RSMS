@@ -1,5 +1,6 @@
 ﻿global using FluentValidation;
 global using FluentValidation.AspNetCore;
+global using FluentValidation.Results;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Rendering;
 global using Newtonsoft.Json;
@@ -18,3 +19,5 @@ global using RSMS.WebClient.Models.Bases;
 global using RSMS.WebClient.Models.Owners;
 global using RSMS.WebClient.Models.Properties;
 global using RSMS.WebClient.Models.Properties.PropertyTypes;
+global using RSMS.WebClient.Validators.Properties;
+global using RSMS.WebClient.Validators.Properties.PropertyTypes;

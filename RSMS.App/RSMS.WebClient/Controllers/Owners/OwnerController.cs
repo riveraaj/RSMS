@@ -1,4 +1,6 @@
-﻿namespace RSMS.WebClient.Controllers.Owners;
+﻿using RSMS.WebClient.Validators.Owners;
+
+namespace RSMS.WebClient.Controllers.Owners;
 public class OwnerController([FromKeyedServices("GetAllOwner")] IGetAllInputPort getAllInputPort,
                              ICreateInputPort<CreateOwnerDTO> createInputPort,
                              IUpdateInputPort<UpdateOwnerDTO> updateInputPort,
@@ -33,12 +35,15 @@ public class OwnerController([FromKeyedServices("GetAllOwner")] IGetAllInputPort
         IOperationResponse response;
 
         // Validate data
-        if (!ModelState.IsValid)
+        CreateOwnerValidator validator = new();
+        ValidationResult result = validator.Validate(model.OwnerObj);
+
+        if (!result.IsValid)
         {
             response = new OperationResponseVO
             {
                 StatusCode = ResponseStatus.Warning,
-                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+                Message = result.Errors.FirstOrDefault().ToString()
             };
         }
         else
@@ -65,12 +70,15 @@ public class OwnerController([FromKeyedServices("GetAllOwner")] IGetAllInputPort
         IOperationResponse response;
 
         // Validate data
-        if (!ModelState.IsValid)
+        UpdateOwnerValidator validator = new();
+        ValidationResult result = validator.Validate(model.OwnerUpdateObj);
+
+        if (!result.IsValid)
         {
             response = new OperationResponseVO
             {
                 StatusCode = ResponseStatus.Warning,
-                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+                Message = result.Errors.FirstOrDefault().ToString()
             };
         }
         else

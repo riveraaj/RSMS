@@ -8,11 +8,6 @@ builder.Services.AddRSMSServices(builder.Configuration);
 
 // Add validators
 builder.Services.AddValidatorsFromAssemblyContaining<UpdateOwnerDTO>();
-builder.Services.AddValidatorsFromAssemblyContaining<CreateOwnerDTO>();
-builder.Services.AddValidatorsFromAssemblyContaining<UpdatePropertyDTO>();
-builder.Services.AddValidatorsFromAssemblyContaining<CreatePropertyDTO>();
-builder.Services.AddValidatorsFromAssemblyContaining<UpdatePropertyTypeDTO>();
-builder.Services.AddValidatorsFromAssemblyContaining<CreatePropertyTypeDTO>();
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 

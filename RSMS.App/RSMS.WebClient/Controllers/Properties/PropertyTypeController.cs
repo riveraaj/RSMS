@@ -33,12 +33,15 @@ public class PropertyTypeController([FromKeyedServices("GetAllPropertyType")] IG
         IOperationResponse response;
 
         // Validate data
-        if (!ModelState.IsValid)
+        CreatePropertyTypeValidator validator = new();
+        ValidationResult result = validator.Validate(model.PropertyTypeObj);
+
+        if (!result.IsValid)
         {
             response = new OperationResponseVO
             {
                 StatusCode = ResponseStatus.Warning,
-                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+                Message = result.Errors.FirstOrDefault().ToString()
             };
         }
         else
@@ -65,12 +68,15 @@ public class PropertyTypeController([FromKeyedServices("GetAllPropertyType")] IG
         IOperationResponse response;
 
         // Validate data
-        if (!ModelState.IsValid)
+        UpdatePropertyTypeValidator validator = new();
+        ValidationResult result = validator.Validate(model.PropertyTypeUpdateObj);
+
+        if (!result.IsValid)
         {
             response = new OperationResponseVO
             {
                 StatusCode = ResponseStatus.Warning,
-                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+                Message = result.Errors.FirstOrDefault().ToString()
             };
         }
         else

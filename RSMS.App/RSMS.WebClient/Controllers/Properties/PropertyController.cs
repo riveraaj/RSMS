@@ -47,12 +47,15 @@ public class PropertyController([FromKeyedServices("GetAllProperty")] IGetAllInp
         IOperationResponse response;
 
         // Validate data
-        if (!ModelState.IsValid)
+        CreatePropertyValidator validator = new();
+        ValidationResult result = validator.Validate(model.PropertyObj);
+
+        if (!result.IsValid)
         {
             response = new OperationResponseVO
             {
                 StatusCode = ResponseStatus.Warning,
-                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+                Message = result.Errors.FirstOrDefault().ToString()
             };
         }
         else
@@ -79,12 +82,15 @@ public class PropertyController([FromKeyedServices("GetAllProperty")] IGetAllInp
         IOperationResponse response;
 
         // Validate data
-        if (!ModelState.IsValid)
+        UpdatePropertyValidator validator = new();
+        ValidationResult result = validator.Validate(model.PropertyUpdateObj);
+
+        if (!result.IsValid)
         {
             response = new OperationResponseVO
             {
                 StatusCode = ResponseStatus.Warning,
-                Message = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+                Message = result.Errors.FirstOrDefault().ToString()
             };
         }
         else
